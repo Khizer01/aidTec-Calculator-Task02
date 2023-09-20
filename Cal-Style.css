@@ -1,6 +1,15 @@
+
+:root{
+  --bg: #f4f4f4;
+  --dark-gray:#333;
+  --white:#fff;
+  --black:#000;
+  --orange:#ff9500;
+}
+
 body {
   font-family: Arial, sans-serif;
-  background-color: #f4f4f4;
+  background-color: var(--bg);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -9,7 +18,7 @@ body {
 }
 
 .calculator {
-  background-color: #333;
+  background-color: var(--dark-gray);
   border-radius: 20px;
   padding: 20px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
@@ -30,12 +39,13 @@ body {
 }
 
 .display {
-  color: #fff;
+  color: var(--white);
   font-size: 24px;
   margin-bottom: 10px;
   padding: 10px;
   border-radius: 10px;
-  background-color: #000;
+  background-color: var(--black);
+  overflow: hidden;
 }
 
 .buttons {
@@ -45,18 +55,28 @@ body {
 }
 
 button {
-  background-color: #fff;
-  color: #333;
+  background-color: var(--white);
+  color: var(--dark-gray);
   font-size: 18px;
   padding: 15px;
   border: none;
-  border-radius: 10px;
+  border-radius: 18px;
   cursor: pointer;
 }
 
+.number:hover{
+  color: var(--white);
+  background:var(--orange) ;
+}
+
 .operator {
-  background-color: #ff9500;
-  color: #fff;
+  background-color: var(--orange);
+  color: var(--white);
+}
+
+.operator:hover{
+  background-color: var(--white);
+  color: var(--black);
 }
 
 #equals {
